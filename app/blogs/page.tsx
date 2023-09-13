@@ -15,7 +15,7 @@ export default async function Blogs() {
         {contents.map((post) => {
           return (
             <li key={post.id}>
-              <Link href={`/blog/${post.id}`}>{post.title}</Link>
+              <Link href={`/blogs/${post.id}`}>{post.title}</Link>
             </li>
           );
         })}

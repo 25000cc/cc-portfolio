@@ -11,7 +11,7 @@ const delay = 1000;
 export type Blog = {
  id: string;
  title: string;
- content: string;
+ body: string;
 } & MicroCMSDate;
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
