@@ -25,7 +25,7 @@ if (!process.env.MICROCMS_API_KEY) {
 // ブログ一覧を取得
 export const getList = async () => {
  const listData = await client.getList<Blog>({
-  endpoint: "blog",
+  endpoint: "blogs",
  });
 
  // データの取得が目視しやすいよう明示的に遅延効果を追加
@@ -40,7 +40,7 @@ export const getDetail = async (
  queries?: MicroCMSQueries
 ) => {
  const detailData = await client.getListDetail<Blog>({
-  endpoint: "blog",
+  endpoint: "blogs",
   contentId,
   queries,
  });

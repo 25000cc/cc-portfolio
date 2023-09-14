@@ -21,7 +21,7 @@ export default function RootLayout({
       
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <Header></Header>
-        <main className='bg-gray-100 flex-grow'>
+        <main className='bg-gray-100 flex-grow px-4 py-10'>
           {children}
         </main>
         <Footer></Footer>
