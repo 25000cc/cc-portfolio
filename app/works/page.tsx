@@ -15,12 +15,12 @@ export default async function About() {
           {contents.map((post) => {
             return (
               <li key={post.id}>
-                <Link href={`/works/${post.id}`}>
-                  <div className='p-2 top-0'>
-                    <img className='w-full' src={post.eyeCatch.url} alt="" />
-                    <h1 className="text-lg">{post.title}</h1>
-                  </div>
-                </Link>
+                <div className='m-2 top-0'>
+                  <Link href={`/works/${post.id}`}>
+                    <img className='w-full rounded-md' src={post.eyeCatch.url} alt="" />
+                    <h1 className="text-base">{post.title}</h1>
+                  </Link>
+                </div>
               </li>
             );
           })}

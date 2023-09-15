@@ -15,12 +15,12 @@ const Header = () => {
 
   return (
     <header className='bg-white'>
-      <Link href='/'><span className='flex justify-center font-black text-4xl pt-7 text-gray-900'>25000cc</span></Link>
+      <span className='flex justify-center font-black text-4xl pt-7 text-gray-900'><Link href='/'>25000cc</Link></span>
       <div className="text-gray-700 flex justify-center space-x-4 mt-4 pb-7 font-bold">
         {navigation.map((item) => (
           <Link key={item.name} href={item.href} className={
             pathname.startsWith(item.href) ? 'text-sky-600' : 'text-black'
-          }><h1 className='text-xl'>{item.name}</h1></Link>
+          }><h1 className='text-xl hover:text-sky-600'>{item.name}</h1></Link>
         ))}
       </div>
     </header>
