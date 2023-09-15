@@ -7,7 +7,7 @@ const inter = Inter({
 })
 
 const notojp = Noto_Sans_JP({
-  weight: ['700'],
+  weight: ['400', '700'],
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-notojp'
