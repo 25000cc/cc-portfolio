@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { getWorkList } from '../../libs/microcms';
 
 export default async function About() {
