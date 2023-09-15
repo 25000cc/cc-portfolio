@@ -1,19 +1,24 @@
-const getFormattedDate = (date: Date, format: string) => {
-  const symbol = {
-    M: date.getMonth() + 1,
-    d: date.getDate(),
-    h: date.getHours(),
-    m: date.getMinutes(),
-    s: date.getSeconds(),
-  };
+// const getFormattedDate = (date: Date, format: string) => {
+//   const symbol = {
+//     M: date.getMonth() + 1,
+//     d: date.getDate(),
+//     h: date.getHours(),
+//     m: date.getMinutes(),
+//     s: date.getSeconds(),
+//   };
 
-  const formatted = format.replace(/(M+|d+|h+|m+|s+)/g, (v) =>
-    ((v.length > 1 ? "0" : "") + symbol[v.slice(-1) as keyof typeof symbol]).slice(-2)
-  );
+//   const formatted = format.replace(/(M+|d+|h+|m+|s+)/g, (v) =>
+//     ((v.length > 1 ? "0" : "") + symbol[v.slice(-1) as keyof typeof symbol]).slice(-2)
+//   );
 
-  return formatted.replace(/(y+)/g, (v) =>
-    date.getFullYear().toString().slice(-v.length)
-  );
-};
+//   return formatted.replace(/(y+)/g, (v) =>
+//     date.getFullYear().toString().slice(-v.length)
+//   );
+// };
+
+const getFormattedDate = (date: string) => {
+  const idx = (date.indexOf(':'))
+  return date.substring(0, idx + 3)
+}
 
 export {getFormattedDate}
