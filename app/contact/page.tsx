@@ -13,7 +13,7 @@ export default function About() {
             <input className="border-solid border w-full py-4 px-2.5" type="email" name="email" required placeholder='MAIL ADDRESS［メールアドレス］' />
           </p>
           <p>
-            <input className="border-solid border w-full py-4 px-2.5" type="email" name="email" required placeholder='TITLE［件名］' />
+            <input className="border-solid border w-full py-4 px-2.5" type="email" name="title" required placeholder='TITLE［件名］' />
           </p>
           <p>
             <textarea className="border-solid border w-full h-80 py-4 px-2.5" name="message" required placeholder="MESSAGE［お問い合わせ内容］"></textarea>
