@@ -5,7 +5,7 @@ export default function About() {
         <h1>お問い合わせ</h1>
         <p>お問い合わせのご返信には、少々お時間を頂く場合がございます。ご了承のほどよろしくお願いいたします。</p>
         <p className="text-gray-500">※入力項目はすべて必須となります。</p>
-        <form className="mt-8" name="contact" method="POST" data-netlify="true">
+        <form className="mt-8" name="contact_form" method="POST" data-netlify="true">
           <p>
             <input className="border-solid border w-full py-4 px-2.5" type="text" name="name" required placeholder='NAME［氏名 / ハンドルネーム］' />
           </p>
