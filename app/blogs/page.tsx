@@ -20,8 +20,8 @@ export default async function Blogs() {
       <div className="w-[640px]	text-left inline-block max-w-full">
         <ul className='list-none pl-0'>
           {posts.map((post) => (
-            <Link href={`/blogs/${post.slug}`}>
-              <li key={post.slug} className='bg-white px-6 py-4 rounded-xl'>
+            <Link key={post.slug} href={`/blogs/${post.slug}`}>
+              <li className='bg-white px-6 py-4 rounded-xl'>
                 <h1 className="text-2xl">{post.frontMatter.title}</h1>
                 <p className='text-gray-500 mt-1 mb-1'>公開 : {getFormattedDate(post.frontMatter.date)}</p>
               </li>
