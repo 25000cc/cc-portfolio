@@ -1,10 +1,7 @@
-import Link from "next/link"
-import About from "./about/page"
+import { redirect } from "next/navigation";
 
-export default function Home() {
-  return (
-    <>
-      <h1>Top</h1>
-    </>
-  )
-}
+const page = async () => {
+  redirect(`/works`);
+};
+
+export default page;
