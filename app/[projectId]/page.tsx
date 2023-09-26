@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getWorkDetail, getWorkList } from "../../../libs/microcms";
+import { getWorkDetail, getWorkList } from "../../libs/microcms";
 
 export async function generateStaticParams() {
   const { contents } = await getWorkList();
