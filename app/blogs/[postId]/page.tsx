@@ -37,7 +37,7 @@ export default async function StaticDetailPage({
           </div>
         </header>
         <div className="mt-3">
-          <ReactMarkdown>{content}</ReactMarkdown>
+          <ReactMarkdown className="blog" linkTarget={"_blank"}>{content}</ReactMarkdown>
         </div>
       </article>
     </div>

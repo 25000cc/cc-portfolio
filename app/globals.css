@@ -18,7 +18,12 @@ h3 {
   font-size: 1.3em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
 }
 
@@ -63,4 +68,19 @@ pre {
   text-wrap: nowrap;
   margin: 1em 0px;
   overflow: auto;
+}
+
+.blog a:link {
+  color: #0000EE;
+  text-decoration: underline;
+}
+
+.blog a:visited {
+  color: #551A8B;
+  text-decoration: underline;
+}
+
+.blog a:active {
+  color: #FF0000;
+  text-decoration: underline;
 }

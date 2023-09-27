@@ -39,8 +39,8 @@ const Header = () => {
 
   return (
     <header className='bg-white'>
-      <span className='flex justify-center font-black text-4xl pt-10 text-gray-900'><Link href='/'>25000cc</Link></span>
-      <div className="text-gray-700 flex justify-center space-x-4 mt-4 pb-10 font-bold">
+      <span className='text-gray-900 flex justify-center font-black text-4xl pt-6 lg:mt-8'><Link href='/'>25000cc</Link></span>
+      <div className="text-gray-700 flex justify-center space-x-4 mt-4 pb-6 lg:pb-10 font-bold">
         {navigation.map((item) => (
           <Link key={item.name} href={item.href} className={
             getColor(item.name, item.href)
