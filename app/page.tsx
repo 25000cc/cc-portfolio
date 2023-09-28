@@ -1,9 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { getWorkList } from '../libs/microcms';
+import { Pagination } from '../components/Pagination'
 
 export default async function About() {
-  const { contents } = await getWorkList()
+  const data = await getWorkList()
+
+  const contents = data.contents
+  const totalCount = data.totalCount
 
   if (!contents || contents.length === 0) {
     return <h1>No contents</h1>;
@@ -32,6 +36,7 @@ export default async function About() {
             );
           })}
         </ul>
+        {/* <Pagination totalCount={totalCount} perRage={contents.length}></Pagination> */}
       </div>
     </div>
   )
