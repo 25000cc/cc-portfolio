@@ -24,8 +24,8 @@ export default async function Blogs() {
           {posts.map((post) => (
             <Link key={post.slug} href={`/blogs/${post.slug}`}>
               <li className='bg-white px-6 py-4 mb-4 rounded-xl'>
-                <h1 className="text-2xl">{post.frontMatter.title}</h1>
-                <p className='text-gray-500 mt-1 mb-1'>公開 : {getFormattedDate(post.frontMatter.date)}</p>
+                <h1 className="text-xl">{post.frontMatter.title}</h1>
+                <p className='text-gray-500 text-xs mt-1 mb-1'>公開 : {getFormattedDate(post.frontMatter.date)}</p>
               </li>
             </Link>
           ))}
