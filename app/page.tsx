@@ -29,6 +29,7 @@ export default async function About() {
                         <p className='text-white font-bold m-0 ml-1'>作品を見る</p>
                       </div>
                     </div>
+                    <h1 className='text-gray-400 text-sm m-2'>{post.date.slice(0, 7)}</h1>
                     <h1 className="text-base m-2">{post.title}</h1>
                   </Link>
                 </div>

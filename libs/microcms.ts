@@ -14,6 +14,7 @@ export type WorksList = {
   eyeCatch: {
     url: string;
   };
+  date: string;
 } & MicroCMSDate;
 
 export type WorkDetail = {
@@ -27,6 +28,7 @@ export type WorkDetail = {
   }[]
   link: string;
   description: string;
+  date: string;
 } & MicroCMSDate;
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {

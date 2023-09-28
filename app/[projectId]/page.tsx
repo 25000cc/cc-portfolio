@@ -28,6 +28,7 @@ export default async function StaticWorkDetailPage({
     <div className="text-center">
       <article className="w-[960px]	text-left inline-block max-w-full">
         <h1>{post.title}</h1>
+        <h1 className="text-gray-400 text-lg">{post.date.slice(0, 7)}</h1>
         <div className="relative group">
           <a href={post.link} target="_blank" rel="noopener noreferrer"><img className="mt-4 hover:brightness-50 duration-200 rounded-md" src={post.eyeCatch.url} alt="" /></a>
           <div className='hidden group-hover:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2'>
