@@ -8,7 +8,7 @@ export default function About() {
             <h1>Main Works</h1>
             <p>動画編集・映像制作・プログラミング</p>
             <h1>Profile</h1>
-            <p>高校生の頃から動画編集やプログラミングにハマり、情報系の大学に進学。クラウドソーシングサイトを利用して映像の仕事を受けるように。</p>
+            <p>主にMVなどの映像を制作します。プログラミングは趣味程度。AEスクリプト、Web、スクレイピング等。</p>
             <h1>Skills</h1>
             <ul>
               <li>After Effects, Premiere Pro, Photoshop</li>
