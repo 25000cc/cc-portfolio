@@ -4,6 +4,7 @@ import Header from './Header'
 import Footer from './Footer'
 import { notojp, inter } from './fonts'
 import Favicon from '../public/favicons/favicon.ico'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
 
 export const metadata: Metadata = {
   title: '25000cc | Movie creater / Programmer',
@@ -18,6 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <GoogleAnalytics></GoogleAnalytics>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <Header></Header>
         <main className={`bg-gray-100 flex-grow px-4 py-10 ${notojp.className}`}>
