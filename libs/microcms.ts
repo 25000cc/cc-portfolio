@@ -17,6 +17,7 @@ export type WorksList = {
   date: string;
 } & MicroCMSDate;
 
+// Worksの詳細ページの型定義
 export type WorkDetail = {
   id: string;
   title: string;

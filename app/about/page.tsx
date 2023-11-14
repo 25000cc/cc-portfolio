@@ -1,9 +1,11 @@
+import Image from 'next/image';
+
 export default function About() {
   return (
     <div className="text-center">
       <div className="w-[640px]	text-left inline-block max-w-full">
         <div className="flex flex-col sm:flex-row items-start">
-          <img className="rounded-[200px] m-auto sm:m-0" src="/profile.png" alt="" width="200" height="200"/>
+          <img className="rounded-[200px] m-auto sm:m-0" src="https://images.microcms-assets.io/assets/f5e60180b6054e0eb4e7abe02497b919/bb0dc6f82ef34343af37189289a8fedb/profile.png" alt="" width="200" height="200"/>
           <div className="sm:ml-8 sm:mt-0 mt-4">
             <h1>Main Works</h1>
             <p>動画編集・映像制作・プログラミング</p>
