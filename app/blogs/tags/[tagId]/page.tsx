@@ -19,6 +19,7 @@ export default async function StaticDetailPage({
   params: { tagId: string };
 }) {
   const tagPosts = getTagPosts(tagId)
+  tagPosts.reverse()
 
   return (
     <div className="text-center">

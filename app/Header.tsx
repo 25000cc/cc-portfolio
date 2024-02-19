@@ -14,7 +14,7 @@ const Header = () => {
   ]
 
   const getColor = (name: string, href: string) => {
-    const blue = 'text-sky-600'
+    const blue = 'text-sky-600 underline'
     const black = 'text-black'
     if (name == 'Works') {
       let worksFlag = true
@@ -39,12 +39,12 @@ const Header = () => {
 
   return (
     <header className='bg-white'>
-      <span className='text-gray-900 flex justify-center font-black text-4xl pt-6 lg:mt-8'><Link href='/'>25000cc</Link></span>
-      <div className="text-gray-700 flex justify-center space-x-4 mt-4 pb-6 lg:pb-10 font-bold">
+      <span className='text-gray-900 flex justify-center font-black text-3xl pt-3 lg:mt-4'><Link href='/'>25000cc</Link></span>
+      <div className="text-gray-700 flex justify-center space-x-4 mt-4 pb-6 lg:pb-5 font-bold">
         {navigation.map((item) => (
           <Link key={item.name} href={item.href} className={
             getColor(item.name, item.href)
-          }><h1 className='text-xl hover:text-sky-600'>{item.name}</h1></Link>
+          }><h1 className='text-lg hover:text-sky-600'>{item.name}</h1></Link>
         ))}
       </div>
     </header>

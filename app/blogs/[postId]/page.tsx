@@ -2,6 +2,7 @@ import { getFormattedDate } from "@/utils/utils";
 import fs from 'fs';
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm'
 import Link from "next/link";
 
 export async function generateStaticParams() {
@@ -38,15 +39,17 @@ export default async function StaticDetailPage({
           </div>
         </header>
         <div className="mt-3">
-          <ReactMarkdown className="blog" linkTarget={"_blank"}>{content}</ReactMarkdown>
+          <ReactMarkdown className="blog" linkTarget={"_blank"} remarkPlugins={[remarkGfm]} children={content}></ReactMarkdown>
         </div>
         <footer>
           <p><strong>Tags:</strong></p>
           <ul>
             {data.tags.map((tag: any) => (
-              <Link key={tag} href={`/blogs/tags/${tag}`}>
-                <li className="a">{tag}</li>
-              </Link>
+              <li key={tag}>
+                <Link href={`/blogs/tags/${tag}`} className="a">
+                  {tag}
+                </Link>
+              </li>
             ))}
           </ul>
         </footer>
