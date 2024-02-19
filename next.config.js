@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: "export",
-    missingSuspenseWithCSRBailout: false
+    output: "export"
 }
 
 module.exports = nextConfig

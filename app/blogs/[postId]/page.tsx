@@ -1,9 +1,10 @@
 import { getFormattedDate } from "@/utils/utils";
+import Link from "next/link";
 import fs from 'fs';
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm'
-import Link from "next/link";
+import { articleComponents } from "@/components/articleComponents";
 
 export async function generateStaticParams() {
   const files = fs.readdirSync('posts')
@@ -39,7 +40,7 @@ export default async function StaticDetailPage({
           </div>
         </header>
         <div className="mt-3">
-          <ReactMarkdown className="blog" linkTarget={"_blank"} remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+          <ReactMarkdown className="blog" linkTarget={"_blank"} remarkPlugins={[remarkGfm]} components={articleComponents}>{content}</ReactMarkdown>
         </div>
         <footer>
           <p><strong>Tags:</strong></p>
