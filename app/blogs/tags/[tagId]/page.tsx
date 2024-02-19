@@ -26,7 +26,9 @@ export default async function StaticDetailPage({
         <h1><Link key={'Tags'} href={'/blogs/tags'} className="underline">Tags</Link> / {tagId}</h1>
         <ul className='list-none pl-0'>
           {tagPosts.map((post) => (
-            <p className="m-0 a"><Link key={post.slug} href={`/blogs/${post.slug}`}>{post.data.title}</Link></p>
+            <p key={post.slug} className="m-0 a">
+              <Link href={`/blogs/${post.slug}`}>{post.data.title}</Link>
+            </p>
           ))}
         </ul>
       </div>
