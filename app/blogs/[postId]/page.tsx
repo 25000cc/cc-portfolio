@@ -39,7 +39,7 @@ export default async function StaticDetailPage({
           </div>
         </header>
         <div className="mt-3">
-          <ReactMarkdown className="blog" linkTarget={"_blank"} remarkPlugins={[remarkGfm]} children={content}></ReactMarkdown>
+          <ReactMarkdown className="blog" linkTarget={"_blank"} remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
         </div>
         <footer>
           <p><strong>Tags:</strong></p>
