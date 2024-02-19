@@ -2,10 +2,11 @@ import { getFormattedDate } from "@/utils/utils";
 import fs from 'fs';
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown';
+import Link from "next/link";
 
 export async function generateStaticParams() {
   const files = fs.readdirSync('posts')
-  
+
   const paths = files.map((fileName) => {
     const slug = fileName.replace(/\.md$/, '');
     return {
@@ -39,6 +40,16 @@ export default async function StaticDetailPage({
         <div className="mt-3">
           <ReactMarkdown className="blog" linkTarget={"_blank"}>{content}</ReactMarkdown>
         </div>
+        <footer>
+          <p><strong>Tags:</strong></p>
+          <ul>
+            {data.tags.map((tag: any) => (
+              <Link key={tag} href={`/blogs/tags/${tag}`}>
+                <li className="a">{tag}</li>
+              </Link>
+            ))}
+          </ul>
+        </footer>
       </article>
     </div>
   );

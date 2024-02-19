@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-a: #1e50cc;
+}
+
 body {
   font-size: 15px;
 }
@@ -71,7 +75,7 @@ pre {
 }
 
 .blog a:link {
-  color: #0000EE;
+  color: var(--color-a);
   text-decoration: underline;
 }
 
@@ -82,5 +86,11 @@ pre {
 
 .blog a:active {
   color: #FF0000;
+  text-decoration: underline;
+}
+
+.a {
+  color: var(--color-a);
+  word-wrap: break-word;
   text-decoration: underline;
 }

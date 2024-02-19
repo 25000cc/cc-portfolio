@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { getFormattedDate } from "@/utils/utils";
 import fs from 'fs';
 import matter from 'gray-matter'
+import { getTags } from '@/libs/posts';
 
 export default async function Blogs() {
   const files = fs.readdirSync('posts')
@@ -15,6 +16,8 @@ export default async function Blogs() {
     }
   });
 
+  const tags = getTags()
+
   posts.reverse()
 
   return (
@@ -23,8 +26,8 @@ export default async function Blogs() {
         <ul className='list-none pl-0'>
           {posts.map((post) => (
             <Link key={post.slug} href={`/blogs/${post.slug}`}>
-              <li className='bg-white px-6 py-4 mb-4 rounded-xl'>
-                <h1 className="text-xl">{post.frontMatter.title}</h1>
+              <li className='bg-white px-5 py-2 mb-4 rounded-xl'>
+                <h1 className="text-lg">{post.frontMatter.title}</h1>
                 <p className='text-gray-500 text-xs mt-1 mb-1'>公開 : {getFormattedDate(post.frontMatter.date)}</p>
               </li>
             </Link>
