@@ -5,6 +5,7 @@ import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm'
 import { articleComponents } from "@/components/articleComponents";
+import SnsBtn from "@/components/SnsBtn";
 
 export async function generateStaticParams() {
   const files = fs.readdirSync('posts')
@@ -26,6 +27,8 @@ export default async function StaticDetailPage({
 }) {
   const fileContent = fs.readFileSync(`posts/${postId}.md`, 'utf-8');
   const { data, content } = matter(fileContent);
+
+  const url = `${process.env.NEXT_PUBLIC_SITE_URL}/blogs/${postId}`
 
   return (
     <div className="text-center">
@@ -53,6 +56,7 @@ export default async function StaticDetailPage({
               </li>
             ))}
           </ul>
+          <SnsBtn url={url} title={data.title}></SnsBtn>
         </footer>
       </article>
     </div>
