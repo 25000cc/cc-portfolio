@@ -20,12 +20,14 @@ const customCode: CodeComponent = ({ inline, className, children }) => {
         </span>
       )}
       <SyntaxHighlighter
-        children={String(children).replace(/\n$/, '')}
+        // children={String(children).replace(/\n$/, '')}
         style={style}
         language={lang}
         PreTag="div"
         className="border-2 text-sm dark:border-stone-400 md:text-sm"
-      />
+      >
+        {String(children).replace(/\n$/, '')}
+      </SyntaxHighlighter>
     </>
   ) : (
     <code className="mx-1 rounded-md bg-stone-200 py-1 px-2 text-red-600 dark:bg-stone-600 dark:text-red-300">
