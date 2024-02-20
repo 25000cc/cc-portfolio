@@ -40,7 +40,7 @@ const SnsBtn = ({ url, title }: Props) => {
 
   return (
     <SnsButtons>
-      <TwitterButton href={`https://twitter.com/share?url=${encodedUrl}&text=${encodedTitle}`} target="_blank" rel="noopener noreferrer">
+      <TwitterButton href={`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`} target="_blank" rel="noopener noreferrer">
         {/* <img src="/icon/white/twitter-brands.svg" alt="Twitter" width="20" height="20" /> */}
         <p>Twitter(X)</p>
       </TwitterButton>
