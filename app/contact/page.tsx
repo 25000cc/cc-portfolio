@@ -6,7 +6,7 @@ export default function About() {
         <p>メールかTwitter(X)のDMまでご連絡ください。</p>
         <p>お問い合わせのご返信には、少々お時間を頂く場合がございます。ご了承のほどよろしくお願いいたします。</p>
         <p>Email : 25000ccprogram@gmail.com</p>
-        <p>Twitter(X) : <a href="https://twitter.com/25000cc" target="_blank" referrerPolicy="no-referrer">@25000cc</a></p>
+        <p>Twitter(X) : <a className="a" href="https://twitter.com/25000cc" target="_blank" referrerPolicy="no-referrer">@25000cc</a></p>
       </div>
     </div>
   )

@@ -9,7 +9,7 @@ import { Suspense } from 'react'
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
-  title: '25000cc | Movie creater / Programmer',
+  title: '25000cc',
   description: '25000cc\'s portfolio',
   icons: [{rel: 'icon', url: Favicon.src}],
   openGraph: {
