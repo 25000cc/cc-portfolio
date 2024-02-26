@@ -94,3 +94,12 @@ ul ul ul {
   word-wrap: break-word;
   text-decoration: underline;
 }
+
+blockquote {
+  position: relative;
+  background-color: #e1e1e1;
+  border-left: 6px solid #b2b2b2;
+  padding: 10px;
+  margin: 0;
+  word-wrap: break-word;
+}

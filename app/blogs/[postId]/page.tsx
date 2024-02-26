@@ -1,11 +1,12 @@
 import { getFormattedDate } from "@/utils/utils";
 import Link from "next/link";
-import fs from 'fs';
+import fs, { link } from 'fs';
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm'
-import { articleComponents } from "@/components/articleComponents";
+import { customCode } from "@/components/articleComponents";
 import SnsBtn from "@/components/SnsBtn";
+import { ComponentType } from "react";
 
 export async function generateStaticParams() {
   const files = fs.readdirSync('posts')
@@ -43,7 +44,21 @@ export default async function StaticDetailPage({
           </div>
         </header>
         <div className="mt-3">
-          <ReactMarkdown className="blog" linkTarget={"_blank"} remarkPlugins={[remarkGfm]} components={articleComponents}>{content}</ReactMarkdown>
+          <ReactMarkdown className="blog"
+            remarkPlugins={[remarkGfm]}
+            components={{
+              code: customCode,
+              a: props => {
+                if (props.href?.startsWith('http')) {
+                  return <a href={props.href} target="_blank" rel="noopener noreferrer">
+                    {props.children}
+                  </a>
+                } else {
+                  return <Link href={props.href!}>{props.children} </Link>
+                }
+              }
+            }}
+          >{content}</ReactMarkdown>
         </div>
         <footer>
           <p><strong>Tags:</strong></p>

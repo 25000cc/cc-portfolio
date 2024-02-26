@@ -2,7 +2,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 import { CodeComponent } from 'react-markdown/lib/ast-to-react'
 
-const customCode: CodeComponent = ({ inline, className, children }) => {
+export const customCode: CodeComponent = ({ inline, className, children }) => {
   const style = atomDark
   const match = /language-(\w+)(:?.+)?/.exec(className || '')
   const lang = match && match[1] ? match[1] : ''
@@ -34,7 +34,4 @@ const customCode: CodeComponent = ({ inline, className, children }) => {
       {children}
     </code>
   )
-}
-export const articleComponents = {
-  code: customCode,
 }
