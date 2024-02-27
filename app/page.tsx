@@ -16,7 +16,7 @@ export default async function About() {
   return (
     <div className="text-center">
       <div className="w-full text-left inline-block max-w-full">
-        <ul className='list-none pl-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'>
+        <ul className='list-none pl-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-6'>
           {contents.map((post) => {
             return (
               <li key={post.id}>
