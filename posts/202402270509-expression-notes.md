@@ -29,3 +29,11 @@ textLayer.text.sourceText.getStyleAt(0, 0)
 PosterizeTime(15)
 value
 ```
+
+# 文字列から数字のみを抽出
+コンポ名から数字のみを取り出す際に使用。
+
+```javascript
+var compName = thisComp.name
+compName.replace(/[^0-9\.]/g, '');
+```
