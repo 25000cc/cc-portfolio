@@ -74,6 +74,10 @@ ul ul ul {
   overflow: auto;
 } */
 
+.blog * {
+  word-break: break-all;
+}
+
 .blog a:link {
   color: var(--color-a);
   text-decoration: underline;

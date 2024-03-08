@@ -6,7 +6,6 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm'
 import { customCode } from "@/components/articleComponents";
 import SnsBtn from "@/components/SnsBtn";
-import { ComponentType } from "react";
 
 export async function generateStaticParams() {
   const files = fs.readdirSync('posts')
@@ -33,7 +32,7 @@ export default async function StaticDetailPage({
 
   return (
     <div className="text-center">
-      <article className="w-[640px]	text-left inline-block max-w-full">
+      <article className="w-[720px] max-w-full	text-left inline-block">
         <header>
           <h1 className="text-2xl">{data.title}</h1>
           <div className="text-gray-500 text-sm mt-2.5">
